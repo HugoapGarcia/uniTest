@@ -1,0 +1,30 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.test.js --bail --watch",
+    "test-environ": "mocha index.test-environ.js",
+    "build": "mv index.js index.js.save && mv empty.js index.js && zip js-interview.zip index.js index.test.js package.json README.md && mv index.js empty.js && mv index.js.save index.js",
+    "build-environ-test": "mv index.js index.js.save && mv empty.js index.js && zip js-environment-test.zip index.js index.test-environ.js package.json README.md && mv index.js empty.js && mv index.js.save index.js",
+    "test-html":"mocha index.test.js",
+    "html": "nyc --reporter=html npm run test-html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devetry/interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devetry/interview/issues"
+  },
+  "homepage": "https://github.com/devetry/interview#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {}
+}
