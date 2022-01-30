@@ -3,6 +3,7 @@
  * @description FS Code assignment.
  */
 
+const { couldStartTrivia } = require('typescript');
 const util = require('util');
 // Given this object...
 const data = {
@@ -107,3 +108,4 @@ function removeEmpty(obj) {
 }
 //let ref = removeEmpty(data);
 //console.log(util.inspect(ref, false, null, true))
+
